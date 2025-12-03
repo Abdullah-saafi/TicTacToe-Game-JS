@@ -1,0 +1,155 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #000;
+  color: White;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 100vw;
+  position: relative;
+}
+
+.MainContainer{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  transform: skew(-10deg);
+  border: 2px solid white;  
+}
+
+
+.box1{
+  display: flex;
+    justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  height: 6rem;
+  width: 6rem;
+  background-color: rgb(41, 40, 40);
+}
+
+.brb{
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid transparent;
+border-image: linear-gradient(to right,  #ffea0080, #ffff00, #ffea0080) 1;
+}
+
+.br{
+    border-right: 8px solid transparent;
+border-image: linear-gradient(to right, #ffea0080, #ffff00, #ffea0080) 1 ;
+}
+
+.bb{
+  border-bottom: 8px solid transparent;
+border-image: linear-gradient(to right, #ffea0080, #ffff00, #ffea0080) 1 0;
+
+
+}
+
+.box1.clicked.X{
+   background: linear-gradient(45deg, #ff0000, #ff5555, #ffaaaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 5px #ff5555;
+
+}
+
+.box1.clicked.O {
+  background: linear-gradient(45deg, #0000ff, #5555ff, #aaaaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 5px #5555ff;
+}
+.restBtn button{
+  background-color: white;
+  color:black;
+  padding: .5rem 1.4rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: bold;
+  margin: 1rem 0rem;
+  cursor: pointer;
+    transition: background-color 0.5s ease;
+  
+
+}
+
+.restBtn p{
+  color:red;
+  margin: .5rem 0rem;
+  visibility:hidden;
+    animation:  0.6s ease-out forwards;
+
+}
+
+button:hover{
+  background-color: #353533;
+  color: rgb(211, 208, 208);
+}
+
+
+.winner {
+      align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+  background: white;
+  color: white;
+  position: absolute;
+  width: 70vw;
+  height: 6rem;
+  z-index: 10;
+  background: linear-gradient(
+    to right,
+    #c5a100,
+    #f5d742,
+    #ffec8b,
+    #f5d742,
+    #c5a100
+    );
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+    transform: scaleX(0);
+    transform-origin: center;
+    visibility: hidden;
+    border-radius: 2rem;
+  }
+  .showWinner{
+    
+    animation: showWinner 0.6s ease-out forwards;
+}
+@keyframes showWinner {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+
+.winnerName{
+background: none;
+    color: rgb(37, 36, 36);
+    padding: 1rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 5vmin;
+}
+
+  .startGame{
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    color: #3f3535;
+    background-color: #ffb800;
+    padding: .5rem 1rem;
+
+  }
